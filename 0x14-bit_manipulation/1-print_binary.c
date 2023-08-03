@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a given integer
- * @n: integer to print
- * Return: void
+ * print_binary - prints the binary representation of an integer
+ * @n: integer is to be print
  */
 
 void print_binary(unsigned long int n)
@@ -13,16 +12,4 @@ void print_binary(unsigned long int n)
 	print_binary(n >> 1);
 	}
 	_putchar((n & 1) + '0');
-}
-
-/**
-* _putchar - writes the character c to stdout
-* @c: The character to print
-*
-* Return: On success 1.
-* On error, -1 is returned, and errno is set appropriately.
-*/
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
